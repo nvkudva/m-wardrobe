@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Nyntra Wardrobe</title>
+    <link rel="icon" href="data:," />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/wardrobe/style.css" />
+  </head>
+  <body>
+    <div id="device">
+      <div id="screen" data-mode="rack">
+        <header class="bar">
+          <button id="menuBtn" class="icon" aria-label="Menu">
+            <svg viewBox="0 0 24 24" width="22" height="22"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" /></svg>
+          </button>
+          <button id="homeBtn" class="icon home" aria-label="Home">
+          <svg class="logo" viewBox="0 0 64 44" width="34" height="24" aria-hidden="true">
+            <defs>
+              <linearGradient id="lg" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0" stop-color="#ff3f6c" /><stop offset="1" stop-color="#f9a03f" />
+              </linearGradient>
+            </defs>
+            <path d="M4 40 16 4h8l8 22 8-22h8l12 36h-9L43 18l-7 22h-8l-7-22-8 22z" fill="url(#lg)" />
+          </svg>
+          </button>
+          <span class="name">Wardrobe</span>
+          <button id="wishBtn" class="icon" aria-label="Wishlist">
+            <svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z" fill="none" stroke="currentColor" stroke-width="1.5" /></svg>
+          </button>
+          <button id="bagBtn" class="icon bag" aria-label="Bag">
+            <svg viewBox="0 0 24 24" width="22" height="22"><path d="M5 8h14l-1 12H6zM9 8V6a3 3 0 0 1 6 0v2" fill="none" stroke="currentColor" stroke-width="1.5" /></svg>
+            <span id="bagCount" class="badge" hidden>0</span>
+          </button>
+        </header>
+
+        <div id="scroll">
+          <nav id="cats" class="cats"></nav>
+          <div id="rails"></div>
+        </div>
+
+        <div class="backdrop"></div>
+        <canvas id="gl"></canvas>
+
+        <section class="pdp-ui">
+          <button id="closeBtn" class="close" aria-label="Back to wardrobe">
+            <svg viewBox="0 0 24 24" width="20" height="20"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" /></svg>
+          </button>
+          <button id="prevBtn" class="arrow left" aria-label="Previous piece">
+            <svg viewBox="0 0 24 24" width="16" height="16"><path d="M19 12H5m6-6-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+          </button>
+          <button id="nextBtn" class="arrow right" aria-label="Next piece">
+            <svg viewBox="0 0 24 24" width="16" height="16"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+          </button>
+          <div id="counter" class="counter"></div>
+          <h1 id="title" class="title"></h1>
+          <div id="price" class="price"></div>
+          <p id="desc" class="desc"></p>
+          <div id="sizes" class="sizes"></div>
+          <button id="addBtn" class="add">ADD TO BAG</button>
+        </section>
+
+        <div id="scrim" class="scrim"></div>
+        <nav id="drawer" class="drawer" aria-label="Menu"></nav>
+        <div id="sheet" class="sheet" role="dialog"></div>
+      </div>
+    </div>
+    <script type="module" src="/src/wardrobe/main.js"></script>
+  </body>
+</html>

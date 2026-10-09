@@ -1,0 +1,1 @@
+{"dependencies": {"three": "^0.170.0"}, "devDependencies": {"vite": "^6.0.0"}, "name": "ai-ecommerce", "private": true, "scripts": {"build": "vite build", "dev": "vite --port 5173", "preview": "vite preview --port 5173"}, "type": "module"}
