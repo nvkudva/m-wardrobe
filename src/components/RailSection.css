@@ -1,0 +1,29 @@
+.rail { padding-top: 22px; }
+.rail h3 { padding: 0 24px 10px; font-size: 17px; font-weight: 700; letter-spacing: 0.01em; }
+.rail h3 span { font-weight: 400; color: var(--mute); font-size: 13px; }
+.view { position: relative; height: 230px; margin: 0; touch-action: pan-y; cursor: grab; }
+
+/* Garments end ~85% down a 196px strip: no dead band under the hems. */
+[data-fixture="bar"] .view { height: 225px; }
+
+/* Accessory rows stand on a 2.5D tabletop drawn under the transparent canvas:
+   the top recedes to a narrower back edge, then a lit front edge. */
+[data-fixture="table"] .view::before, [data-fixture="table"] .view::after { content: ""; position: absolute; left: 0; right: 0; pointer-events: none; }
+[data-fixture="table"] .view::before {
+  top: 72%;
+  height: 20%;
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.05), transparent 18%, transparent 82%, rgba(0, 0, 0, 0.05)),
+    linear-gradient(180deg, #e3d6c3, #f1e8da 70%, #f6efe4);
+  clip-path: polygon(6% 0, 94% 0, 100% 100%, 0 100%);
+}
+[data-fixture="table"] .view::after {
+  top: 92%;
+  height: 6%;
+  background: linear-gradient(180deg, #fbf6ee 0 8%, #dccab0 12%, #cdb999);
+  box-shadow: 0 10px 16px -8px rgba(60, 40, 20, 0.35);
+}
+.caption { margin-top: 2px; padding: 0 18px; min-height: 40px; text-align: center; font-size: 14px; line-height: 1.4; transition: opacity 0.16s; }
+.caption b { display: -webkit-box; font-weight: 600; overflow: hidden; -webkit-line-clamp: 2; -webkit-box-orient: vertical; line-height: 1.3; }
+.caption span { color: var(--mute); }
+.out { opacity: 0; }

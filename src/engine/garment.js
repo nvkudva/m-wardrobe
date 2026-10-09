@@ -1,8 +1,8 @@
 import * as THREE from "three";
 import * as cloth from "./cloth.js";
-import * as paint from "./paint.js";
-import * as shapes from "./shapes.js";
-import * as fabrics from "./fabric.js";
+import * as paint from "../catalog/paint.js";
+import * as shapes from "../catalog/shapes.js";
+import * as fabrics from "../catalog/fabric.js";
 
 // A garment on a hanger: hanger meshes, the two fabric sheets, the cloth sim and
 // the hanger's swing on its hook. The page only moves the hook (`hook`) and

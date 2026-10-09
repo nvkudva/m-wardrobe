@@ -1,0 +1,6 @@
+{
+  // Static site on Workers: serves the Vite build at m-wardrobe.nvkudva.workers.dev.
+  "name": "m-wardrobe",
+  "compatibility_date": "2026-10-01",
+  "assets": { "directory": "./dist" }
+}

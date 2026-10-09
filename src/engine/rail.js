@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
 import * as garment from "./garment.js";
-import * as shapes from "./shapes.js";
+import * as shapes from "../catalog/shapes.js";
 
 // One rail of garments in its own scene: lights, wall, rail bar, the garments
 // and their rack ↔ detail choreography. The page owns the renderer, the

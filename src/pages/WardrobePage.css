@@ -1,0 +1,9 @@
+#scroll {
+  position: absolute;
+  inset: calc(var(--top) + 48px) 0 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: none;
+  padding-bottom: 40px;
+}
+#scroll::-webkit-scrollbar { display: none; }

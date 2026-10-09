@@ -1,1 +1,23 @@
-{"dependencies": {"three": "^0.170.0"}, "devDependencies": {"vite": "^6.0.0"}, "name": "ai-ecommerce", "private": true, "scripts": {"build": "vite build", "dev": "vite --port 5173", "preview": "vite preview --port 5173"}, "type": "module"}
+{
+  "dependencies": {
+    "@preact/signals": "^2.11.3",
+    "preact": "^11.0.1",
+    "three": "^0.170.0"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.10.6",
+    "playwright": "^1.64.0",
+    "typescript": "^7.0.2",
+    "vite": "^6.0.0"
+  },
+  "name": "m-wardrobe",
+  "private": true,
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite --port 5173",
+    "preview": "vite preview --port 5173",
+    "typecheck": "tsc --noEmit",
+    "deploy": "vite build && wrangler deploy"
+  },
+  "type": "module"
+}
