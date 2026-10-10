@@ -128,4 +128,4 @@ It drives Chrome with Playwright at a phone viewport, warms up every page first,
 ## Notes
 
 - This is a tech demo. The brand, products, prices, user and orders are made up.
-- Source on GitHub; there is no license file yet.
+- [MIT licensed](LICENSE).

@@ -19,5 +19,6 @@
     "typecheck": "tsc --noEmit",
     "deploy": "vite build && wrangler deploy"
   },
-  "type": "module"
+  "type": "module",
+  "license": "MIT"
 }
