@@ -2,3 +2,4 @@ node_modules/
 dist/
 *.mp4
 *.mov
+!docs/*.mp4
